@@ -1,0 +1,29 @@
+/**
+ * Write a description of point here.
+ * 
+ * @author (SoumayKantiDas) 
+ * @version (11/19/2020)
+ */
+public class point {
+    private int x;
+    private int y;
+    public point (int X ,int Y)
+    { 
+        x= X;
+        y= Y;
+    }
+    public int getx() {return x;}
+    public int gety() {return y;}
+    public double distance(point otherpt)
+    {
+        int dx = x - otherpt.getx();
+        int dy = y - otherpt.gety();
+        return Math.sqrt( dx * dx + dy * dy );
+    }
+    public static void main(String[] args)
+    {
+        point p1 = new point(3,4);
+        point p2 = new point(6,8);
+        System.out.println(p1.distance(p2));
+    }
+}
